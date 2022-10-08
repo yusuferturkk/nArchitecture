@@ -16,13 +16,13 @@ namespace Application.Features.Brands.Queries.GetByIdBrand
     {
         public int Id { get; set; }
 
-        public class GetByIdBrandQueryHangler : IRequestHandler<GetByIdBrandQuery, BrandGetByIdDto>
+        public class GetByIdBrandQueryHandler : IRequestHandler<GetByIdBrandQuery, BrandGetByIdDto>
         {
             private readonly IBrandRepository _brandRepository;
             private readonly IMapper _mapper;
             private readonly BrandBusinessRules _brandBusinessRules;
 
-            public GetByIdBrandQueryHangler(IBrandRepository brandRepository, IMapper mapper,
+            public GetByIdBrandQueryHandler(IBrandRepository brandRepository, IMapper mapper,
                                             BrandBusinessRules brandBusinessRules)
             {
                 _brandRepository = brandRepository;
